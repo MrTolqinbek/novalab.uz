@@ -1,33 +1,134 @@
-.gettouch{
+.gettouch {
     padding-top: 100px;
     min-height: 800px;
-    background-color: #ebf7ff;
+
 }
-.left-touch{
+
+.left-touch {
     float: left;
     width: 50%;
     text-align: left;
-    padding-right:20px ;
+    padding-right: 20px;
 
 }
-.left-touch h1,.right-touch-h{
-   font-size: 40px;
-   line-height: 60px;
-   font-weight: 700;
-   color: #000248;
-   padding-bottom: 60px;
- 
+
+.left-touch h1,
+.right-touch-h {
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: 700;
+    color: #000248;
+    padding-bottom: 60px;
+
 }
-.left-touch h2{
+
+.left-touch h2 {
     line-height: 26px;
     font-size: 20px;
     font-weight: 400;
     color: rgb(117, 117, 137);
- }
-.right-touch{
+}
+
+.right-touch {
     padding-top: 20px;
     padding-left: 20px;
     float: right;
     width: 50%;
     text-align: center;
+}
+
+.right-touch input {
+    margin-bottom: 30px;
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.right-touch-card {
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.212);
+    padding: 18px 8%;
+    border-radius: 20px;
+    transition: 0.8s linear;
+}
+
+.right-touch-card:hover {
+    box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.096);
+}
+
+.right-touch input {
+    margin-bottom: 20px;
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(139, 138, 138);
+    padding: 2px 10px;
+    border-bottom: 2px solid rgba(87, 85, 85, 0.89);
+}
+
+.right-touch form>div {
+    position: relative;
+}
+
+.right-touch input+div {
+    transition: 0.8s linear;
+    position: absolute;
+    font-size: 20px;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(139, 138, 138);
+}
+
+.right-touch input:focus+div {
+    top: -15px;
+    font-size: 14px;
+}
+
+.right-touch button {
+    width: 100%;
+    margin: 32px 0;
+}
+
+.touch-contacts {
+    padding: 0 0 20px;
+    color: rgb(102, 96, 96);
+}
+
+.touch-contacts i {
+    margin: 0 10px;
+    transition: 0.3s linear;
+    font-size: 20px;
+    color: rgba(47, 0, 255, 0.452);
+}
+
+.phone-number {
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: rgb(0, 0, 173);
+}
+
+.touch-contacts i:hover {
+
+    color: rgba(47, 0, 255, 0.863);
+}
+
+@media screen and (max-width:920px) {
+    .right-touch {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    .left-touch {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }

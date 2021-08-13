@@ -149,6 +149,7 @@
     
     
 .move-top{
+    z-index: 100;
     opacity: 1;
     position: fixed;
     bottom: 80px;
