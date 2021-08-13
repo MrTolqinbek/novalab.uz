@@ -1,0 +1,247 @@
+.transition {
+    transform-style: preserve-3d;
+    transition: 0.3s linear;
+    transform: perspective(1010px);
+
+}
+
+.view-img-big {
+    position: relative;
+    width: 100%;
+}
+
+.view-img-big img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.view-img-big::after {
+    position: absolute;
+    top: 12%;
+    left: -12%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(-10px);
+    content: "";
+    border: 4px solid #000248;
+}
+
+.view-img-small {
+    position: relative;
+    top: -200px;
+}
+
+.right-view {
+    float: right;
+    width: 40%;
+}
+
+.left-view {
+    float: left;
+    width: 60%;
+}
+
+.right-view::after,
+.left-view::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.view .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.view {
+    padding-bottom: 20px;
+    min-height: 950px;
+    background-color: rgb(236, 248, 255);
+}
+
+.left-view h1 {
+    color: #000248;
+    font-size: 54px;
+    margin-bottom: 60px;
+    padding-right: 50px;
+}
+
+.left-view h3 {
+    color: #5a5b74;
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 60px;
+    padding-right: 50px;
+}
+
+.button {
+    width: 160px;
+    position: relative;
+    height: 50px;
+
+    outline: none;
+    color: #000248;
+    font-size: 20px;
+    font-weight: 700;
+    z-index: 1;
+    border: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.fa-arrow-right {
+    margin-left: 20px;
+}
+
+.button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    transition: 0.4s linear;
+    z-index: -1;
+    background-color: transparent;
+    border: 3px solid #000248;
+}
+
+.button:hover::before {
+    border: 8px solid #000248;
+    transform: scale(1.7);
+    opacity: 0;
+}
+
+ .button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s linear;
+    z-index: -1;
+    transform: scale(0.1);
+    background-color: #000248;
+
+}
+
+ .button:hover::after {
+    border: 8px solid #000248;
+    transform: scale(1);
+    opacity: 1;
+}
+
+ .button:hover {
+    color: white;
+}
+.move-top-x{
+  transition: 0.6s linear;
+  opacity: 0;
+    }
+    
+    
+.move-top{
+    opacity: 1;
+    position: fixed;
+    bottom: 80px;
+    right: 60px;
+    width: 70px;
+    height: 70px;
+    font-size: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px 10px rgba(8, 153, 189, 0.281) ,inset  0 0 20px 2px rgba(8, 153, 189, 0.281) ;
+    border-radius: 20px;
+    animation: fixed-bar linear 0.7s infinite;
+}
+.move-top span {
+    position: absolute;
+    top: 4px;
+    left:25px;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid #000248;
+    border-left: 5px solid #000248 ;
+    transform: rotateZ(45deg);
+    transition: 1s linear;
+}
+.move-top:hover span {
+    transform: rotatez(405deg);
+   top:-2px;
+}
+
+
+
+
+@keyframes fixed-bar{
+    0%{
+        box-shadow: 0 0 20px 10px rgba(117, 117, 117, 0.281) ,inset  0 0 20px 2px rgba(94, 94, 94, 0.281) ;
+    }
+    100%{
+        box-shadow: 0 0 30px 19px rgba(68, 68, 68, 0.281) ,inset  0 0 20px 27px rgba(99, 99, 99, 0.336) ;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .view .container{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+     
+    }
+    .right-view{
+        width: 100%;
+        display: flex;
+        margin: 30px 0;
+        align-items: baseline;
+    }
+    .left-view{
+        width: 100%;
+    }
+ 
+    .view-img-big::after {
+display: none;
+    }
+    .view-img-small{
+        left:-80px;
+        top:0;
+  width: 40%;
+    }
+    .view-img-big{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:700px) {
+  .right-view{
+    position: relative;
+  }
+ 
+    .view-img-small img{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+       width: 100%;
+    
+    }
+    .view-img-small{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .view-img-big{
+        width: 100%;
+    }
+}

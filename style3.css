@@ -1,0 +1,115 @@
+.card{
+   width: 300px;
+}
+.card{
+    float: left;
+    width: calc(100% / 3);
+}
+.card::after{
+    display: table;
+    content: "";
+    clear: both;
+}
+
+@media screen and (max-width:1000px) {
+    .card{
+        float: left;
+        width: calc(100% / 2);
+    }
+}
+@media screen and (max-width:700px) {
+    .card{
+        float: left;
+        width: 100%;
+    }
+}
+.center-header{
+    text-align: center;
+    margin: 90px 0;
+    font-size: 25px;
+    color: #000248;
+}
+.card-out{
+    margin: auto;
+    width: 100px;
+    position: relative;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #0c6cc5da;
+}
+.card-out::before{
+    display: block;
+    content: "";
+    width: 22px;
+    transform: rotate(45deg) translateY(-30px);
+    height: 50px;
+    position: absolute;
+    background-image: linear-gradient(to bottom,white,transparent)
+}
+.row::after{
+display: block;
+content: "";
+    clear: both;
+}
+.card-out i{
+    color: rgb(255, 255, 255);
+font-size: 38px;
+
+}
+.card-body{
+    color: #000248;
+    font-weight: 700;
+    size: 20px;
+    line-height: 29px;
+    text-align: center;
+    margin: 40px 0 30px ;
+}
+.card-header{
+padding-top: 28px;
+}
+.card{
+    position: relative;
+    padding: 0 10px;
+    background-color: rgba(255, 255, 255, 0.877);
+}
+.card:hover{
+
+box-shadow: 0 0 29px 1px rgba(109, 109, 109, 0.281);
+}
+.card:hover i{
+    transform: translateZ(10px);
+}
+
+.card::after{
+    opacity: 0;
+    position: absolute;
+   content: "";
+   width: 100%;
+   height: 100%;
+   display: block;
+   top: 0;
+   z-index: -1;
+   left: 0;
+   border: 5px solid #000248;
+  transform-style: preserve-3d;
+  transition: 0.3s linear;
+  transform:perspective(1000px) rotateX(10deg) rotateY(10deg) translateZ(-1px);
+
+    }
+.card:hover::after{
+  opacity: 1;
+   
+    }
+.card:not(:hover)::after{
+    transform:perspective(1000px) rotateX(-20deg) rotateY(-20deg) ;
+}
+.card-footer{
+    font-weight: 400;
+    font-size:16px ;
+    line-height: 26px;
+    color: rgb(117, 117, 137);
+}
