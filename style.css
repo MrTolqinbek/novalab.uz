@@ -9,7 +9,9 @@ html{
     overflow: hidden;
     overflow-y: auto;
 }
-
+body{
+    overflow: hidden;
+}
 
 .container {
     width: 87%;
