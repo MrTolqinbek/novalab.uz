@@ -88,7 +88,10 @@
     top: -15px;
     font-size: 14px;
 }
-
+.right-touch .input-in{
+    top: -15px;
+    font-size: 14px;
+}
 .right-touch button {
     width: 100%;
     margin: 32px 0;
@@ -123,6 +126,7 @@
         padding-left: 0;
         padding-right: 0;
     }
+    
 
 
     .left-touch {

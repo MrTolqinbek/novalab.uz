@@ -1,0 +1,57 @@
+.project-h {
+    padding-top: 120px;
+    font-size: 40px;
+}
+
+.card-body-p {
+    font-size: 23px;
+}
+
+.card-footer-p {
+    font-size: 20px;
+}
+
+.card-h {
+    margin: 20px;
+    width: calc(100% / 3 - 40px);
+    border-radius: 8px;
+    padding: 0 20px 40px;
+    text-align: center;
+    box-shadow: 0 0 16px 1px rgba(94, 89, 89, 0.747);
+}
+
+.card-work .card-header img {
+    width: 100%;
+}
+
+.card-work {
+    text-align: center;
+    padding: 10px 15px 20px;
+}
+.button.btn-work{
+    width: 400px;
+}
+.btn-box{
+    padding: 50px 0;
+    text-align: center;
+}
+
+
+
+
+@media screen and (max-width:1000px) {
+    .card-h {
+        float: left;
+        width: calc(100% / 2 - 40px);
+    }
+}
+
+@media screen and (max-width:700px) {
+    .card-h {
+        float: left;
+        width: 100%;
+    }
+    .button.btn-work{
+        width: 90%;
+    }
+}
