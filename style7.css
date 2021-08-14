@@ -1,0 +1,82 @@
+.card-t{
+    width: calc(100% / 3 - 40px);
+    float: left;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 40px 20px;
+    box-shadow: 0 0 10px 3px rgba(109, 106, 106, 0.616) ;
+}
+.card-h-t i{
+    font-size: 50px;
+    box-shadow: 0 0 100px 6px rgba(151, 137, 8, 0.534);
+    padding: 10px;
+    border-radius: 50%;
+    color: rgb(136, 136, 22);
+}
+.card-h-t{
+    text-align: center;
+}
+.card-body-t{
+    padding: 10px 0;
+    font-size: 20px;
+    color: #000248;
+    text-align: center;
+}
+.card-footer-t{
+    color: rgb(128, 123, 128);
+}
+.card-footer-t>div{
+text-align: center;
+letter-spacing: 1.5px;
+padding: 10px 7px;
+position: relative;
+transition:transform 0.8s cubic-bezier(0.9, 0.055, 0.675, 0.19);
+}
+.card-footer-t>div::after{
+    position: absolute;
+    display: block;
+    content: "";
+    left: -16px;
+    width: 15px;
+   top: 10px;
+   transform: rotateZ(225deg);
+    height: 15px;
+    border: none;
+    border-bottom:3px solid #2a2c2c;
+    border-left: 3px solid #2a2c2c;
+   
+}
+.card-footer-t>div:hover{  
+   transform: translateX(20px);
+}
+footer{
+    height: 80px;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    color: #000248;
+}
+.container-f{
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+   
+}
+@media screen and (max-width:1000px) {
+    .card-t {
+        float: left;
+        width: calc(100% / 2 - 40px);
+    }
+}
+
+@media screen and (max-width:700px) {
+    .card-t {
+        float: left;
+        width: calc(100% - 40px);
+    }
+   
+}
